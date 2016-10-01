@@ -469,8 +469,10 @@ def rgb_to_hue(red, green, blue):
     :param green: Green value (0-255).
     :param blue: Blue value (0-255).
     :returns: Hue value (0-255).
+
+    source: https://github.com/happyleavesaoc/python-limitlessled
     """
-    hue = rgb_to_hls(red / 255, green / 255, blue / 255)[0] \
+    hue = rgb_to_hls(red / 255.0, green / 255.0, blue / 255.0)[0] \
         * -1 \
         + 1 \
         + (2.0/3.0)  # RGB -> BGR
